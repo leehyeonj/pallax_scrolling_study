@@ -1,4 +1,14 @@
 
+.menu{
+    background-color: white;
+    height: 80px;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    visibility: visible;
+    opacity: 0.7;
+}
 .main_img_wrap {
     background-color: black;
 }
