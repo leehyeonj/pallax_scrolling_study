@@ -1,14 +1,11 @@
 /* eslint-disable prettier/prettier */
-import logo from "./logo.svg";
-import "./main.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 function App() {
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [position, setPosition] = useState("absolute");
-  const [visibility, setVisibility] = useState("visible");
+
   const [progressbar, setProgressBar] = useState(0);
 
   const updateScroll = () => {
@@ -17,7 +14,7 @@ function App() {
     } else {
       setPosition("absolute");
     }
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+
     setProgressBar(
       Math.ceil(
         (window.scrollY / (document.body.scrollHeight - window.outerHeight)) *
@@ -32,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <Menu position={position} visibility={visibility}>
+      <Menu position={position}>
         <MenuBar>
           <MenuIcon
             fontSize="large"
@@ -45,20 +42,16 @@ function App() {
         </ProgressBar>
       </Menu>
 
-      <div className="main_img_wrap">
-        <img
-          className="main_img"
+      <MainImgWrap>
+        <MainImg
           alt=""
           src="https://images.unsplash.com/photo-1669604120699-eeba651ac235?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
         />
-      </div>
-      <div className="content_wrap">
-        <pre className="content">
-       
-          꽃이 끓는 풀이 사랑의 놀이 청춘 바이며, 힘있다. 
-          피가 뼈 커다란 남는 갑
-          생생하며, 이 사람은 그들은 그리하였는가? 
-          모래뿐일 피고, 같은 따뜻한
+      </MainImgWrap>
+      <ContentWrap>
+        <Content>
+          꽃이 끓는 풀이 사랑의 놀이 청춘 바이며, 힘있다. 피가 뼈 커다란 남는 갑
+          생생하며, 이 사람은 그들은 그리하였는가? 모래뿐일 피고, 같은 따뜻한
           오아이스도 같지 가치를 끓는다. 그들의 피가 끓는 때까지 할지니, 낙원을
           날카로우나 철환하였는가? 심장은 열락의 같이 때문이다. 지혜는 가지에
           인류의 작고 봄바람을 역사를 없으면, 싶이 말이다. 이상, 열매를 피가
@@ -79,8 +72,8 @@ function App() {
           열매를 사막이다. 풀이 찾아다녀도, 위하여 것이다. 자신과 우리의 품었기
           맺어, 바이며, 아니더면, 위하여 우리는 아니다. 얼음에 어디 주며, 얼음
           긴지라 그들의 부패뿐이다.
-        </pre>
-      </div>
+        </Content>
+      </ContentWrap>
     </div>
   );
 }
@@ -92,7 +85,7 @@ const Menu = styled.div`
   position: ${(props) => props.position};
   width: 100vw;
   top: 0;
-  visibility: ${(props) => props.visibility};
+
   opacity: 0.7;
 `;
 
@@ -107,5 +100,36 @@ const Progress = styled.span`
   width: ${(props) => props.width}%;
   display: block;
   height: 2px;
+`;
+const MainImgWrap = styled.div`
+  background-color: black;
+`;
+
+const MainImg = styled.img`
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+`;
+
+const ContentWrap = styled.div`
+  position: relative;
+  width: 100%;
+  margin-top: 800px;
+  background-color: #fff;
+  z-index: 1;
+`;
+
+const Content = styled.pre`
+  z-index: 10;
+  width: 600px;
+  height: 10000px;
+  margin: 0 auto;
+  white-space: pre-line;
+  line-height: 40px;
+  margin-top: 100vh;
+  background-color: white;
+  font-size: 1.2rem;
 `;
 export default App;
