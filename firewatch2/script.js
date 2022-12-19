@@ -14,7 +14,7 @@ function scrollFunc(e) {
       "perspective(400px) translateZ(" +
       scrollTop / (5 * (totalNum - i)) +
       "px)";
-    // imageAll[i].style.transform = "perspective(400px) translateZ("+ scrollTop/5 +"px)";
+
     console.log(scrollTop, scrollTop / (5 * (totalNum - i)));
   }
 }

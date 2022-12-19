@@ -2,14 +2,6 @@ var opThresh = 350;
 var opFactor = 750;
 let scrollTop = 0;
 window.onload = function () {
-  parallax_0 = document.getElementById("keyart-0");
-  parallax_1 = document.getElementById("keyart-1");
-  parallax_2 = document.getElementById("keyart-2");
-  parallax_3 = document.getElementById("keyart-3");
-  parallax_4 = document.getElementById("keyart-4");
-  parallax_5 = document.getElementById("keyart-5");
-  parallax_6 = document.getElementById("keyart-6");
-
   window.addEventListener("scroll", scrollFunc, false);
 };
 
