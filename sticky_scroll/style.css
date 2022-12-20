@@ -1,0 +1,27 @@
+.wrap {
+  width: 100%;
+  height: 4000px;
+}
+.img_area {
+  width: 800px;
+  height: 1000px;
+  background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9923143E5CDE636C07");
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.text_area {
+  position: fixed;
+  font-size: 100px;
+  display: inline-block;
+  top: 30vh;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+.scrollable {
+  position: absolute;
+  top: 1880px;
+}
