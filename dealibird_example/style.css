@@ -3,7 +3,7 @@
   height: 100vh;
 }
 div.wrap {
-  /* width: 1400px; */
+  width: 1400px;
   padding: 0 50px;
   margin: 0 auto;
   position: relative;
@@ -39,7 +39,16 @@ section#contents div.imgSlider .slider img {
   width: 750px;
   height: 450px;
 }
-
+section#contents div.imgSlider div.nav {
+  position: absolute;
+  z-index: 99;
+  right: -78px;
+  bottom: 77px;
+  background: #fff;
+  height: 70px;
+  width: 225px;
+  transform: rotate(-90deg);
+}
 section#contents div.imgSlider p.title {
   color: #313131;
   font-size: 12px;
